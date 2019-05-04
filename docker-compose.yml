@@ -1,0 +1,12 @@
+version: '2'
+services:
+    python:
+        image: shivergard/tenser13p3
+        volumes:
+            - ./:/space
+    web:
+        image: shivergard/docker-webserver
+        ports:
+            - 55:80
+        volumes:
+            - ./website:/var/www
